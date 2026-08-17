@@ -40,63 +40,64 @@
             padding: 0 20px;
         }
 
-        .hero {
+        .page {
+            background: white;
+            padding: 45px 25px;
+            border-radius: 15px;
             text-align: center;
-            padding: 45px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .hero h1 {
-            font-size: 40px;
+        .page h1 {
+            font-size: 36px;
             margin: 0 0 20px;
         }
 
-        .hero p {
+        .page p {
             color: #666;
             line-height: 1.8;
         }
 
-        .start-button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 35px;
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            color: #333;
+            font-size: 17px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background: #f1eee8;
+        }
+
+        .main-button {
             background: #333;
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border: none;
+            margin-top: 30px;
+        }
+
+        .main-button:hover {
+            background: #444;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .question {
-            margin-top: 30px;
-            background: white;
-            padding: 35px 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
         .question h2 {
-            text-align: center;
-            margin-top: 0;
-        }
-
-        .choices {
-            display: grid;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .choice {
-            padding: 18px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background: white;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: left;
-        }
-
-        .choice:hover {
-            background: #f1eee8;
+            margin-bottom: 25px;
         }
 
         footer {
@@ -107,8 +108,8 @@
         }
 
         @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 32px;
+            .page h1 {
+                font-size: 30px;
             }
 
             main {
@@ -128,7 +129,8 @@
 
 <main>
 
-    <section class="hero">
+    <!-- トップページ -->
+    <section class="page" id="home">
 
         <h1>次に読む本、見つけよう。</h1>
 
@@ -137,40 +139,72 @@
             そんなときのための、本探しのお手伝いサイトです。
         </p>
 
-        <a href="#question" class="start-button">
+        <button class="button main-button" onclick="showPage('choice')">
             本を探してみる
-        </a>
+        </button>
 
     </section>
 
 
-    <section class="question" id="question">
+    <!-- 探し方を選ぶ画面 -->
+    <section class="page hidden" id="choice">
+
+        <h1>どうやって探しますか？</h1>
+
+        <p>
+            あなたに合った方法で、本を探してみましょう。
+        </p>
+
+        <button class="button" onclick="showPage('mood')">
+            🎭 気分から探す
+        </button>
+
+        <button class="button" onclick="showPage('search')">
+            🔍 自分で探す
+        </button>
+
+    </section>
+
+
+    <!-- Q1 -->
+    <section class="page hidden question" id="mood">
+
+        <h1>気分から探す</h1>
 
         <h2>Q1. 今日はどんな気分？</h2>
 
-        <div class="choices">
+        <button class="button">
+            🌿 ゆったり読みたい
+        </button>
 
-            <button class="choice">
-                🌿 ゆったり読みたい
-            </button>
+        <button class="button">
+            😂 楽しく笑いたい
+        </button>
 
-            <button class="choice">
-                😂 楽しく笑いたい
-            </button>
+        <button class="button">
+            😮 ハラハラしたい
+        </button>
 
-            <button class="choice">
-                😮 ハラハラしたい
-            </button>
+        <button class="button">
+            🧙 異世界ものが読みたい
+        </button>
 
-            <button class="choice">
-                🧙 異世界ものが読みたい
-            </button>
+        <button class="button">
+            🧠 何かを学びたい
+        </button>
 
-            <button class="choice">
-                🧠 何かを学びたい
-            </button>
+    </section>
 
-        </div>
+
+    <!-- 自分で探す画面 -->
+    <section class="page hidden" id="search">
+
+        <h1>自分で探す</h1>
+
+        <p>
+            ここには後ほど、本のタイトルやジャンルなどから<br>
+            自分で探せる検索機能を追加します。
+        </p>
 
     </section>
 
@@ -179,6 +213,25 @@
 <footer>
     © 2026 次の一冊
 </footer>
+
+
+<script>
+    function showPage(pageId) {
+
+        const pages = document.querySelectorAll(".page");
+
+        pages.forEach(function(page) {
+            page.classList.add("hidden");
+        });
+
+        document.getElementById(pageId).classList.remove("hidden");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
 
 </body>
 </html>
