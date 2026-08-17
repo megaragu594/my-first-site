@@ -94,6 +94,25 @@
             background: #444;
         }
 
+        .book {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #faf9f6;
+            text-align: left;
+        }
+
+        .book h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .book p {
+            margin-bottom: 0;
+        }
+
         .hidden {
             display: none;
         }
@@ -201,68 +220,197 @@
 
         <h2>Q2. どんな「ゆったり」を楽しみたい？</h2>
 
-        <button class="button">🧙 異世界でのんびり暮らしたい</button>
-        <button class="button">🌳 自然や動植物を楽しみたい</button>
-        <button class="button">🏕️ アウトドアを楽しみたい</button>
-        <button class="button">🚶 旅や知らない場所を楽しみたい</button>
-        <button class="button">🏠 穏やかな日常を楽しみたい</button>
-        <button class="button">🎲 どれでもいいから、ゆったり読みたい</button>
+        <button class="button">
+            🧙 異世界でのんびり暮らしたい
+        </button>
+
+        <!-- ここだけ推薦結果につながる -->
+        <button class="button" onclick="showPage('nature-books')">
+            🌳 自然や動植物を楽しみたい
+        </button>
+
+        <button class="button">
+            🏕️ アウトドアを楽しみたい
+        </button>
+
+        <button class="button">
+            🚶 旅や知らない場所を楽しみたい
+        </button>
+
+        <button class="button">
+            🏠 穏やかな日常を楽しみたい
+        </button>
+
+        <button class="button">
+            🎲 どれでもいいから、ゆったり読みたい
+        </button>
 
     </section>
 
 
-    <!-- Q2：楽しく笑いたい -->
+    <!-- 自然・動植物のおすすめ -->
+    <section class="page hidden" id="nature-books">
+
+        <h1>🌳 あなたにおすすめの3冊</h1>
+
+        <p>
+            自然や動植物を、ゆっくり楽しみたいあなたへ。
+        </p>
+
+
+        <div class="book">
+
+            <h3>📖 自然散策が楽しくなる！ 日本の生きもの図鑑</h3>
+
+            <p>
+                成島悦雄 監修・多摩六都科学館 監修
+            </p>
+
+            <p>
+                日本の身近な生きものを、美しい写真や豆知識とともに
+                楽しめるハンディ図鑑です。
+            </p>
+
+        </div>
+
+
+        <div class="book">
+
+            <h3>🌱 植物はすごい ― 生き残りをかけたしくみと工夫</h3>
+
+            <p>
+                田中修 著
+            </p>
+
+            <p>
+                身近な植物が持っている不思議な仕組みや、
+                生き残るための工夫を楽しみながら学べる読み物です。
+            </p>
+
+        </div>
+
+
+        <div class="book">
+
+            <h3>🐾 角川の集める図鑑GET！ 動物</h3>
+
+            <p>
+                総監修：小菅正夫　監修：天野雅男
+            </p>
+
+            <p>
+                動物を生息地域や環境ごとに見ることで、
+                世界の自然や動物たちの暮らしを楽しめる図鑑です。
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 楽しく笑いたい -->
     <section class="page hidden" id="funny">
 
         <h1>😂 楽しく笑いたい</h1>
 
         <h2>Q2. どんな「楽しい」を読みたい？</h2>
 
-        <button class="button">📖 笑えるラノベを読みたい</button>
-        <button class="button">📚 笑える漫画を読みたい</button>
-        <button class="button">🐾 面白い雑学・生き物の本を読みたい</button>
-        <button class="button">😄 面白いエッセイや体験談を読みたい</button>
-        <button class="button">🎭 ジャンルは決めず、とにかく笑いたい</button>
+        <button class="button">
+            📖 笑えるラノベを読みたい
+        </button>
+
+        <button class="button">
+            📚 笑える漫画を読みたい
+        </button>
+
+        <button class="button">
+            🐾 面白い雑学・生き物の本を読みたい
+        </button>
+
+        <button class="button">
+            😄 面白いエッセイや体験談を読みたい
+        </button>
+
+        <button class="button">
+            🎭 ジャンルは決めず、とにかく笑いたい
+        </button>
 
     </section>
 
 
-    <!-- Q2：ハラハラ -->
+    <!-- ハラハラ -->
     <section class="page hidden" id="thrill">
 
         <h1>😮 ハラハラしたい</h1>
 
         <h2>Q2. どんなハラハラを楽しみたい？</h2>
 
-        <button class="button">🧙 ファンタジーの冒険でハラハラしたい</button>
-        <button class="button">🔍 謎を追いかけてハラハラしたい</button>
-        <button class="button">🐾 生き物たちの世界を見てハラハラしたい</button>
-        <button class="button">🚀 未知の世界でハラハラしたい</button>
-        <button class="button">🏃 極限状態を乗り越える物語が読みたい</button>
-        <button class="button">🎲 どれでもいいから、ハラハラしたい</button>
+        <button class="button">
+            🧙 ファンタジーの冒険でハラハラしたい
+        </button>
+
+        <button class="button">
+            🔍 謎を追いかけてハラハラしたい
+        </button>
+
+        <button class="button">
+            🐾 生き物たちの世界を見てハラハラしたい
+        </button>
+
+        <button class="button">
+            🚀 未知の世界でハラハラしたい
+        </button>
+
+        <button class="button">
+            🏃 極限状態を乗り越える物語が読みたい
+        </button>
+
+        <button class="button">
+            🎲 どれでもいいから、ハラハラしたい
+        </button>
 
     </section>
 
 
-    <!-- Q2：異世界 -->
+    <!-- 異世界 -->
     <section class="page hidden" id="isekai">
 
         <h1>🧙 異世界ものが読みたい</h1>
 
         <h2>Q2. どんな異世界を楽しみたい？</h2>
 
-        <button class="button">🌿 異世界でのんびり暮らしたい</button>
-        <button class="button">😂 異世界で楽しく笑いたい</button>
-        <button class="button">⚔️ 異世界で冒険したい</button>
-        <button class="button">💕 異世界で恋をしたい</button>
-        <button class="button">👑 異世界の物語や人間関係を楽しみたい</button>
-        <button class="button">🌌 異世界の世界そのものを楽しみたい</button>
-        <button class="button">🎲 何でもいいから異世界作品を読みたい</button>
+        <button class="button">
+            🌿 異世界でのんびり暮らしたい
+        </button>
+
+        <button class="button">
+            😂 異世界で楽しく笑いたい
+        </button>
+
+        <button class="button">
+            ⚔️ 異世界で冒険したい
+        </button>
+
+        <button class="button">
+            💕 異世界で恋をしたい
+        </button>
+
+        <button class="button">
+            👑 異世界の物語や人間関係を楽しみたい
+        </button>
+
+        <button class="button">
+            🌌 異世界の世界そのものを楽しみたい
+        </button>
+
+        <button class="button">
+            🎲 何でもいいから異世界作品を読みたい
+        </button>
 
     </section>
 
 
-    <!-- Q2：学び -->
+    <!-- 学び -->
     <section class="page hidden" id="learn">
 
         <h1>🧠 何かを学びたい</h1>
