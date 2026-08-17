@@ -127,7 +127,7 @@
 
 <main>
 
-    <!-- トップページ -->
+    <!-- トップ -->
     <section class="page" id="home">
 
         <h1>次に読む本、見つけよう。</h1>
@@ -144,7 +144,7 @@
     </section>
 
 
-    <!-- 探し方を選ぶ画面 -->
+    <!-- 探し方 -->
     <section class="page hidden" id="choice">
 
         <h1>どうやって探しますか？</h1>
@@ -171,23 +171,23 @@
 
         <h2>Q1. 今日はどんな気分？</h2>
 
-        <button class="button" onclick="selectMood('relax')">
+        <button class="button" onclick="showPage('relax')">
             🌿 ゆったり読みたい
         </button>
 
-        <button class="button">
+        <button class="button" onclick="showPage('funny')">
             😂 楽しく笑いたい
         </button>
 
-        <button class="button">
+        <button class="button" onclick="showPage('thrill')">
             😮 ハラハラしたい
         </button>
 
-        <button class="button">
+        <button class="button" onclick="showPage('isekai')">
             🧙 異世界ものが読みたい
         </button>
 
-        <button class="button">
+        <button class="button" onclick="showPage('learn')">
             🧠 何かを学びたい
         </button>
 
@@ -201,33 +201,93 @@
 
         <h2>Q2. どんな「ゆったり」を楽しみたい？</h2>
 
-        <button class="button">
-            🧙 異世界でのんびり暮らしたい
-        </button>
-
-        <button class="button">
-            🌳 自然や動植物を楽しみたい
-        </button>
-
-        <button class="button">
-            🏕️ アウトドアを楽しみたい
-        </button>
-
-        <button class="button">
-            🚶 旅や知らない場所を楽しみたい
-        </button>
-
-        <button class="button">
-            🏠 穏やかな日常を楽しみたい
-        </button>
+        <button class="button">🧙 異世界でのんびり暮らしたい</button>
+        <button class="button">🌳 自然や動植物を楽しみたい</button>
+        <button class="button">🏕️ アウトドアを楽しみたい</button>
+        <button class="button">🚶 旅や知らない場所を楽しみたい</button>
+        <button class="button">🏠 穏やかな日常を楽しみたい</button>
+        <button class="button">🎲 どれでもいいから、ゆったり読みたい</button>
 
     </section>
 
 
-    <!-- 自分で探す画面 -->
+    <!-- Q2：楽しく笑いたい -->
+    <section class="page hidden" id="funny">
+
+        <h1>😂 楽しく笑いたい</h1>
+
+        <h2>Q2. どんな「楽しい」を読みたい？</h2>
+
+        <button class="button">📖 笑えるラノベを読みたい</button>
+        <button class="button">📚 笑える漫画を読みたい</button>
+        <button class="button">🐾 面白い雑学・生き物の本を読みたい</button>
+        <button class="button">😄 面白いエッセイや体験談を読みたい</button>
+        <button class="button">🎭 ジャンルは決めず、とにかく笑いたい</button>
+
+    </section>
+
+
+    <!-- Q2：ハラハラ -->
+    <section class="page hidden" id="thrill">
+
+        <h1>😮 ハラハラしたい</h1>
+
+        <h2>Q2. どんなハラハラを楽しみたい？</h2>
+
+        <button class="button">🧙 ファンタジーの冒険でハラハラしたい</button>
+        <button class="button">🔍 謎を追いかけてハラハラしたい</button>
+        <button class="button">🐾 生き物たちの世界を見てハラハラしたい</button>
+        <button class="button">🚀 未知の世界でハラハラしたい</button>
+        <button class="button">🏃 極限状態を乗り越える物語が読みたい</button>
+        <button class="button">🎲 どれでもいいから、ハラハラしたい</button>
+
+    </section>
+
+
+    <!-- Q2：異世界 -->
+    <section class="page hidden" id="isekai">
+
+        <h1>🧙 異世界ものが読みたい</h1>
+
+        <h2>Q2. どんな異世界を楽しみたい？</h2>
+
+        <button class="button">🌿 異世界でのんびり暮らしたい</button>
+        <button class="button">😂 異世界で楽しく笑いたい</button>
+        <button class="button">⚔️ 異世界で冒険したい</button>
+        <button class="button">💕 異世界で恋をしたい</button>
+        <button class="button">👑 異世界の物語や人間関係を楽しみたい</button>
+        <button class="button">🌌 異世界の世界そのものを楽しみたい</button>
+        <button class="button">🎲 何でもいいから異世界作品を読みたい</button>
+
+    </section>
+
+
+    <!-- Q2：学び -->
+    <section class="page hidden" id="learn">
+
+        <h1>🧠 何かを学びたい</h1>
+
+        <h2>Q2. 何について学びたい？</h2>
+
+        <button class="button">🧬 生物・動物</button>
+        <button class="button">🏛️ 歴史</button>
+        <button class="button">🪨 地学・地理</button>
+        <button class="button">🔬 科学</button>
+        <button class="button">🌌 宇宙・天文学</button>
+        <button class="button">🧠 心理・脳科学</button>
+        <button class="button">💻 IT・コンピューター</button>
+        <button class="button">🌱 環境・自然</button>
+        <button class="button">🎨 芸術・文化</button>
+        <button class="button">💰 社会・経済</button>
+        <button class="button">🎲 分野は決めず、何か面白いことを学びたい</button>
+
+    </section>
+
+
+    <!-- 自分で探す -->
     <section class="page hidden" id="search">
 
-        <h1>自分で探す</h1>
+        <h1>🔍 自分で探す</h1>
 
         <p>
             ここには後ほど、本のタイトルやジャンルなどから<br>
@@ -237,6 +297,7 @@
     </section>
 
 </main>
+
 
 <footer>
     © 2026 次の一冊
@@ -259,15 +320,6 @@
             top: 0,
             behavior: "smooth"
         });
-    }
-
-
-    function selectMood(mood) {
-
-        if (mood === "relax") {
-            showPage("relax");
-        }
-
     }
 
 </script>
