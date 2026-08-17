@@ -53,6 +53,11 @@
             margin: 0 0 20px;
         }
 
+        .page h2 {
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+
         .page p {
             color: #666;
             line-height: 1.8;
@@ -70,7 +75,7 @@
             color: #333;
             font-size: 17px;
             cursor: pointer;
-            text-align: center;
+            text-align: left;
         }
 
         .button:hover {
@@ -82,6 +87,7 @@
             color: white;
             border: none;
             margin-top: 30px;
+            text-align: center;
         }
 
         .main-button:hover {
@@ -90,14 +96,6 @@
 
         .hidden {
             display: none;
-        }
-
-        .question {
-            text-align: center;
-        }
-
-        .question h2 {
-            margin-bottom: 25px;
         }
 
         footer {
@@ -167,13 +165,13 @@
 
 
     <!-- Q1 -->
-    <section class="page hidden question" id="mood">
+    <section class="page hidden" id="mood">
 
         <h1>気分から探す</h1>
 
         <h2>Q1. 今日はどんな気分？</h2>
 
-        <button class="button">
+        <button class="button" onclick="selectMood('relax')">
             🌿 ゆったり読みたい
         </button>
 
@@ -191,6 +189,36 @@
 
         <button class="button">
             🧠 何かを学びたい
+        </button>
+
+    </section>
+
+
+    <!-- Q2：ゆったり -->
+    <section class="page hidden" id="relax">
+
+        <h1>🌿 ゆったり読みたい</h1>
+
+        <h2>Q2. どんな「ゆったり」を楽しみたい？</h2>
+
+        <button class="button">
+            🧙 異世界でのんびり暮らしたい
+        </button>
+
+        <button class="button">
+            🌳 自然や動植物を楽しみたい
+        </button>
+
+        <button class="button">
+            🏕️ アウトドアを楽しみたい
+        </button>
+
+        <button class="button">
+            🚶 旅や知らない場所を楽しみたい
+        </button>
+
+        <button class="button">
+            🏠 穏やかな日常を楽しみたい
         </button>
 
     </section>
@@ -216,6 +244,7 @@
 
 
 <script>
+
     function showPage(pageId) {
 
         const pages = document.querySelectorAll(".page");
@@ -231,6 +260,16 @@
             behavior: "smooth"
         });
     }
+
+
+    function selectMood(mood) {
+
+        if (mood === "relax") {
+            showPage("relax");
+        }
+
+    }
+
 </script>
 
 </body>
